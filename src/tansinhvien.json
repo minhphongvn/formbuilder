@@ -1,0 +1,322 @@
+{
+  "templateID": 0,
+  "logo_org": "https://lhu.edu.vn/ViewPage/LHUVN/_default/image/truong_dai_hoc_lac_hong_logo.png",
+  "name_org": "Trường Đại học Lạc Hồng",
+  "url_finishRedirect": "https://lhu.edu.vn",
+  "Title": "PHIẾU KHẢO SÁT",
+  "Des": "Nhằm mục đích đem đến những giá trị tốt đẹp nhất cho các bạn sinh viên. Trường Đại học Lạc Hồng rất mong các Bạn sinh viên đóng góp một số ý kiến cá nhân của bản thân. Mọi thông tin trong phiếu khảo sát sẽ được lưu trữ mang tính chất bảo mật và không công khai.",
+  "url_login": "",
+  "url_template": "",
+  "Part": [
+    {
+      "uuid": 1038208,
+      "Name": "THÔNG TIN CHUNG",
+      "Des": "",
+      "Question": [
+        {
+          "Type": "TextBox",
+          "Text": "Họ và tên sinh viên:\t",
+          "QID": 688079,
+          "Holder": ""
+        },
+        {
+          "Type": "Radio",
+          "Text": "Giới tính:",
+          "QID": 879840,
+          "Option": [
+            {
+              "Text": "Nam"
+            },
+            {
+              "Text": "Nữ"
+            }
+          ]
+        },
+        {
+          "Type": "TextBox",
+          "Text": "Ngành học:",
+          "QID": 218928,
+          "Holder": "Liệt kê ngành học"
+        },
+        {
+          "Type": "TextBox",
+          "Text": "Tỉnh sinh sống:",
+          "QID": 297934,
+          "Holder": "Liệt kê các tỉnh thành"
+        },
+        {
+          "Type": "TextBox",
+          "Text": "Điện thoại liên lạc:",
+          "QID": 896815,
+          "Holder": ""
+        },
+        {
+          "Type": "Radio",
+          "Text": "Hộ khẩu thường trú của bạn thuộc khu vực:",
+          "QID": 894200,
+          "Option": [
+            {
+              "Text": " Thành thị"
+            },
+            {
+              "Text": "Nông thôn"
+            }
+          ]
+        },
+        {
+          "Type": "Radio",
+          "Text": "Xếp loại học lực năm lớp 12 của bạn:",
+          "QID": 711057,
+          "Option": [
+            {
+              "Text": "Giỏi"
+            },
+            {
+              "Text": "Khá"
+            },
+            {
+              "Text": "Trung bình"
+            },
+            {
+              "Text": "Yếu"
+            }
+          ]
+        },
+        {
+          "Type": "Radio",
+          "Text": "Bạn có nguyện vọng đăng ký xét tuyển vào đại học Lạc Hồng theo hình thức:",
+          "QID": 254620,
+          "Option": [
+            {
+              "Text": " Xét tuyển bằng học bạ"
+            },
+            {
+              "Text": "Xét tuyển điểm thi tốt nghiệp THPT"
+            },
+            {
+              "Text": "Xét tuyển bằng ký thi đánh giá năng lực"
+            },
+            {
+              "Text": " Xét tuyển thẳng"
+            }
+          ]
+        },
+        {
+          "Type": "Radio",
+          "Text": "Bạn biết đến Trường Đại học Lạc Hồng thông qua kênh truyền thông:",
+          "QID": 407624,
+          "Option": [
+            {
+              "Text": "Người thân, anh chị giới thiệu "
+            },
+            {
+              "Text": "Website trường. "
+            },
+            {
+              "Text": "Facebook"
+            },
+            {
+              "Text": "Zalo "
+            },
+            {
+              "Text": "Truyền hình"
+            },
+            {
+              "Text": "Báo giấy."
+            },
+            {
+              "Text": "Báo mạng"
+            },
+            {
+              "Text": "Giấy kiểm tra."
+            },
+            {
+              "Text": "Bút bi."
+            },
+            {
+              "Text": " Khác:",
+              "Des": "",
+              "Option": [
+                {
+                  "Type": "TextBox",
+                  "Text": "",
+                  "QID": 414299,
+                  "Holder": "Mô tả"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Type": "Radio",
+          "Text": " Kỳ vọng của bạn sau khi học tại trường ",
+          "QID": 639738,
+          "Option": [
+            {
+              "Text": "Có việc làm đúng với ngành học\t"
+            },
+            {
+              "Text": "Nắm vững kiến thức và thực hành chuyên môn"
+            },
+            {
+              "Text": "Có khả năng học lên bậc học cao hơn\t"
+            },
+            {
+              "Text": "Có khả năng tự học, tự nghiên cứu"
+            },
+            {
+              "Text": "Có đầy đủ các kỹ năng mềm"
+            },
+            {
+              "Text": "Đạt trình độ ngoại ngữ và tin học theo yêu cầu thị trường"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": 100128,
+      "Name": "THÔNG TIN",
+      "Des": "Mô tả",
+      "Question": [
+        {
+          "QID": 695342,
+          "Type": "MarkTable",
+          "Text": "XIN BẠN VUI LÒNG ĐÁNH DẤU ✓ VÀO Ô CHỌN LỰA CỦA MÌNH ",
+          "Des": "Vui lòng đánh giá mức độ bằng cách chọn MỘT mức tương ứng theo thang điểm 5 quy ước sau: 1 = Rất không đ\nồng ý, 2 = Không đồng ý, 3 = Không ý kiến, 4 = Đồng ý và 5 = Rất đồng ý",
+          "ValueArray": [
+            {
+              "Value": "1",
+              "Text": "Rất không đồng ý"
+            },
+            {
+              "Value": "2",
+              "Text": "Không đồng ý"
+            },
+            {
+              "Value": "3",
+              "Text": "Không ý kiến"
+            },
+            {
+              "Value": "4",
+              "Text": "Đồng ý"
+            },
+            {
+              "Value": "5",
+              "Text": "Rất đồng ý"
+            }
+          ],
+          "Topic": [
+            {
+              "GroupID": "P2-07-T1",
+              "Name": "I. LÝ DO CHỌN TRƯỜNG ĐẠI HỌC LẠC HỒNG ",
+              "Question": [
+                {
+                  "QID": "P2-07-T1-01",
+                  "Text": "1. Tôi chọn trường vì được Tư vấn trực tiếp qua điện thoại "
+                },
+                {
+                  "QID": "P2-07-T1-02",
+                  "Text": "2. Tôi chọn trường vì được Tham quan hướng nghiệp"
+                },
+                {
+                  "QID": "P2-07-T1-03",
+                  "Text": "3. Tôi chọn trường vì được Xem các chương trình tư vấn tuyển sinh trên truyền hình."
+                },
+                {
+                  "QID": "P2-07-T1-04",
+                  "Text": "4. Tôi chọn trường vì được Tư vấn bởi cán bộ tuyển sinh tại trường THPT"
+                }
+              ]
+            },
+            {
+              "GroupID": 284049,
+              "Name": "II. NGƯỜI CÓ SỨC ẢNH HƯỞNG ĐẾN VIỆC CHỌN TRƯỜNG ĐẠI HỌC ",
+              "Question": [
+                {
+                  "QID": 1003269,
+                  "Text": "1. Tôi chọn trường vì theo ý kiến bạn bè"
+                },
+                {
+                  "QID": 462702,
+                  "Text": "2. Tôi chọn trường vì được người thân trong gia đình định hướng"
+                },
+                {
+                  "QID": 105834,
+                  "Text": "3. Tôi chọn trường vì được nghe lời khuyên Thầy/Cô cấp 3."
+                },
+                {
+                  "QID": 112188,
+                  "Text": "4. Tôi chọn trường vì được chia sẻ từ các Anh/Chị khóa trước cùng Trường."
+                }
+              ]
+            },
+            {
+              "GroupID": 642900,
+              "Name": "  III. CHÍNH SÁCH THU HÚT",
+              "Question": [
+                {
+                  "QID": 617060,
+                  "Text": "1. Trường có nhiều phần thưởng kết nối thông qua Facebook."
+                },
+                {
+                  "QID": 752597,
+                  "Text": "2. Trường có nhiều ưu đãi lớn khi nhập học sớm (Giảm học phí, Học bổng khuyến học)"
+                },
+                {
+                  "QID": 611758,
+                  "Text": "3. Trường có mức học phí tương đối thấp so với các trường khác."
+                },
+                {
+                  "QID": 338984,
+                  "Text": "4. Trường có được hỗ trợ vay vốn đóng học phí."
+                },
+                {
+                  "QID": 316243,
+                  "Text": "5. Trường có học phí được đóng linh hoạt (Chia nhiều lần đóng/năm)."
+                },
+                {
+                  "QID": 700118,
+                  "Text": "6. Trường có Chương trình học đảm bảo chất lượng cao."
+                },
+                {
+                  "QID": 486377,
+                  "Text": "7. Trường có Nhiều môn học được kiến tập thực tế"
+                },
+                {
+                  "QID": 653742,
+                  "Text": "8. Có cơ hội kiếm được việc làm có thu nhập cao sau khi tốt nghiệp"
+                }
+              ]
+            },
+            {
+              "GroupID": 445442,
+              "Name": "IV. QUYẾT ĐỊNH CHỌN HỌC TẠI TRƯỜNG ĐH LẠC HỒNG",
+              "Question": [
+                {
+                  "QID": 581625,
+                  "Text": "1. Tôi chọn học tại  trường là một quyết định đúng đắn"
+                },
+                {
+                  "QID": 667169,
+                  "Text": "2. Tôi vẫn chọn học tại trường nếu có cơ hội thay đổi quyết định lựa chọn của mình"
+                },
+                {
+                  "QID": 604565,
+                  "Text": "3. Tôi sẽ giới thiệu trường cho những đàn em khoá dưới"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QID": 631899,
+          "Type": "TextArea",
+          "Text": "V. Anh chị mong muốn Khoa và Nhà trường hỗ trợ gì trong quá trình học tại trường",
+          "Row": "3",
+          "Holder": "Nhập nội dung"
+        }
+      ]
+    }
+  ]
+}
