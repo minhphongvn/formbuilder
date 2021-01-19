@@ -108,13 +108,29 @@
                     @focus="focusable"
                     autofocus
                 />
-                <div v-for="(ques, j) in item.Question" :key="j">
+                <draggable
+                    v-model="item.Question"
+                    element="span"
+                    :group="{ name: 'group-question' }"
+                    handle=".group-question"
+                    ghost-class="ee"
+                    @sort="$store.commit('setQID')"
+                    v-bind="dragOptions"
+                >
+                  <transition-group type="transition" class="py-0" group tag="div">
+                <div class="white rounded" v-for="(ques, j) in item.Question" :key="j">
                   <v-text-field
-                      class="mb-2"
-                      hide-details="true"
+                      class="custom2"
+                      hide-details
+                      solo
+                      flat
                       v-model="ques.Text"
                       dense
+                      :autofocus="j == item.Question.length-1"
                   >
+                    <template slot="prepend">
+                      <v-icon class="group-question">mdi-drag-vertical</v-icon>
+                    </template>
                     <template slot="append-outer">
                       <v-icon
                           @click="
@@ -126,12 +142,17 @@
                       >
                     </template>
                   </v-text-field>
+                  <v-divider class="mr-8"></v-divider>
                 </div>
+
+                  </transition-group>
+                </draggable>
                 <div>
                   <v-text-field
+                      readonly
                       color="grey lighten-4"
                       style="width: 150px"
-                      class="text-body-1 custom my-2"
+                      class="text-body-1 custom my-4"
                       @click="
                        item.Question.push({
                         QID: '',
@@ -215,6 +236,7 @@
       <!-- </transition-group>
       </draggable> -->
       <v-btn
+          class="mb-4"
           v-if="dragging==false"
         small
         color="blue"
@@ -241,6 +263,7 @@
 <script>
 import toolbax from "./layout/bottom-toolbar";
 import point from "./preview/points";
+import draggable from "vuedraggable";
 
 export default {
   name: "marktable",
@@ -321,6 +344,7 @@ export default {
   components: {
     toolbax,
     point,
+    draggable
   },
   computed: {
     updateRate() {
@@ -329,7 +353,7 @@ export default {
     },
     dragOptions() {
       return {
-        animation: 200,
+        animation: 100,
         disabled: false,
         ghostClass: "ghost",
       };
@@ -353,7 +377,6 @@ export default {
   height: 80px;
   width: 50px;
 }
-
 /*.hold {*/
 /*  !* border: 2px solid rgba(128, 128, 128, 0.425); *!*/
 /*  border: 1px solid gray;*/

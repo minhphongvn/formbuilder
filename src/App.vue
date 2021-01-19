@@ -429,6 +429,10 @@ body {
 .custom.v-text-field>.v-input__control:hover {
   border-bottom: 1px solid #d3d9df;
 }
+
+.custom2.v-text-field>.v-input__control>.v-input__slot{
+  padding: 0!important;
+}
 /*.custom.v-text-field:before>.v-input__control:hover {*/
 /*  border-bottom: 1px solid #d3d9df;*/
 /*}*/
