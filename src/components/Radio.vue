@@ -145,17 +145,6 @@
         <v-flex class="mx-3">
           <v-row>
             <v-col style="height: 40px" class="drag" cols="2">
-<!--              <v-btn-->
-<!--                elevation="0"-->
-<!--                class="ma-0"-->
-<!--                color="success"-->
-<!--                v-on:click="-->
-<!--                  data.Option.push({-->
-<!--                    Text: 'Tùy chọn ' + (data.Option.length + 1),-->
-<!--                  })-->
-<!--                "-->
-<!--                >+ Thêm</v-btn-->
-<!--              >-->
             </v-col>
             <v-spacer></v-spacer>
             <toolbax
@@ -193,11 +182,6 @@
                 handle=".handle"
                 v-bind="dragOptions"
             >
-              <!-- <transition-group type="transition" class="py-0" group tag="div">
-              <div v-for="(item,i) in data.Option" :key="i">
-                <v-radio :value="i" class="handle my-1" :label="item.Text" />
-              </div>
-            </transition-group> -->
             </draggable>
           </v-radio-group>
         </div>

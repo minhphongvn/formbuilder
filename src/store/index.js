@@ -2,11 +2,14 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import moment from "moment";
 import api from '../api';
+import jwt from 'jsonwebtoken';
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    accessToken: "",
+    user: {},
     useless: true,
     dates: [moment().format("YYYY-MM-DD"), moment().add(10, "days").format("YYYY-MM-DD")],
     template: {
@@ -47,6 +50,20 @@ export default new Vuex.Store({
     draggle: true
   },
   mutations: {
+    setUser: function (state, payload){
+      state.user = {
+        ...state.user,
+        ...payload
+      }
+    },
+    setAuth: function(state,token){
+      let user = '';
+      if (token != null && token !== "undefined"){
+        user = jwt.decode(`eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.${token}`);
+        this.commit('setUser',user.uid)
+      }
+      state.accessToken = token;
+    },
     setDraggle: function (state,payload){
       state.draggle = payload
     },
@@ -110,6 +127,10 @@ export default new Vuex.Store({
     setViewMode: state => state.viewMode = !state.viewMode
   },
   actions: {
+    getUserInfo: async function ({commit}){
+      const user = api.get("https://tapi.lhu.edu.vn/me/obj/UserInfo/");
+      await user.then(res => commit('setUser', res.data.data)).catch(err => console.log(err))
+    },
     getAllTemplates: async function ({commit}) {
       const data = api.get("/Web_SelectTemplate");
       await data.then(res => commit('setTemplates',res.data.data)).catch(err => console.log(err))

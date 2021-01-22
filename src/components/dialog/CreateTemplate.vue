@@ -59,7 +59,7 @@
         >
         </div>
         <div>
-          <v-toolbar class="text-right py-1" tile dense>
+          <v-toolbar class="text-right py-0 px-1" tile dense>
             <v-btn class="text-subtitle-2 mr-1" :disabled="!btns.viewBtn.status" :color="btns.viewBtn.color" v-text="`${btns.viewBtn.text}`" @click="viewBtn" text></v-btn>
             <v-spacer></v-spacer>
             <v-btn class="text-subtitle-2 mr-1" :disabled="!btns.createBtn.status" :color="btns.createBtn.color" v-text="`${btns.createBtn.text}`" @click="createBtn" text></v-btn>

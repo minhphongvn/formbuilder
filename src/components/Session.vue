@@ -223,7 +223,8 @@ export default {
 .list-group > div:empty,
 .list-group > div:not(:empty):after{
   display: flow-root;
-  outline: 1px dotted grey;
+  border: 2px dotted grey;
+  border-radius: 5px;
   padding: 0.5rem 1rem;
   text-align: center;
 }
@@ -234,7 +235,7 @@ export default {
 .list-group > div:not(:empty):after {
   opacity: 0.7;
   color: grey;
-  content: "Thả ở đây !";
+  content: "Thả ở đây";
 }
 
 /*.cyt > div:not(:empty):after {*/
