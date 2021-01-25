@@ -105,8 +105,8 @@ export default {
     }
   },
   components: {
-    TextBox: () => import("../TextBox"),
-    Radio: () => import("../Radio"),
+    TextBox: () => import("../controls/TextBox"),
+    Radio: () => import("../controls/Radio"),
     draggable
   },
   computed:{

@@ -51,8 +51,8 @@
 
 <script>
 import draggable from "vuedraggable";
-import session from "../Session";
-import formtitle from "../Formtitle";
+import session from "./controls/Session";
+import formtitle from "./controls/Formtitle";
 export default {
   name: "main",
   props: {

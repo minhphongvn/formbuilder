@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import App from './App'
-import './interceptor';
+import './interceptor/interceptor';
 import vuetify from './plugins/vuetify';
-import router from './router';
 import api from './api';
 import store from './store';
 import VTitle from 'v-tooltip';
@@ -17,7 +16,6 @@ Vue.use(Cookies);
 
 new Vue({
   vuetify,
-  router,
   store,
   created() {
     store.dispatch('getUserInfo')

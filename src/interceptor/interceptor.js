@@ -1,4 +1,4 @@
-import axios from './api/index';
+import axios from '../api';
 import VueCookies from 'vue-cookies';
 
 let redirect = url => window.location.href = url;

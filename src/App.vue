@@ -84,8 +84,8 @@
 <script>
   import jsonviewer from "./components/dialog/JsonViewer";
   import createTemplate from "./components/dialog/CreateTemplate";
-  import bottombar from "./components/layout/bottom-navigation";
-  import MainForm from "./components/layout/MainForm";
+  import bottombar from "./components/layout/controls-bar";
+  import MainForm from "./components/MainForm";
   import navdrawer from "./components/layout/nav-drawer";
   import Xacnhan from "@/components/dialog/xacnhan";
 

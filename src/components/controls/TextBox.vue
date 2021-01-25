@@ -1,15 +1,14 @@
 <template>
-  <div id="textarea">
-    <div :class="`${editable ? 'hold' : ''} ${dragging==false?'py-2':'py-0'}`" v-click-outside="()=>{editable = false;editing(false)}">
+  <div id="textbox">
+    <div :class="`${editable ? 'hold' : ''} ${full&&dragging==false?'py-2':'py-0'}`" v-click-outside="()=>{editable = false;editing(false)}">
       <div v-if="editable" class="px-3">
         <v-text-field
-            placeholder="Câu hỏi"
           class="my-5 font-weight-bold"
           v-model="data.Text"
           v-on:keyup.enter="editing(false)"
           dense
-            hide-details
           autofocus
+          hide-details
         ></v-text-field>
         <v-text-field
           placeholder="Gợi ý nhập"
@@ -19,15 +18,15 @@
           dense
         />
         <v-divider class="my-4"></v-divider>
-        <v-flex class="mx-3 mt-4">
+        <v-flex class="mx-3 mt4">
           <v-row>
             <v-col style="height: 40px" class="drag">
               <v-switch
                 v-model="data.Required"
                 class="my-0 py-0"
                 color="error"
-                dense
                 inset
+                dense
                 label="Bắt buộc"
               ></v-switch>
             </v-col>
@@ -35,18 +34,31 @@
             <toolbax
               :change="change"
               :remove="remove"
-              @editable="editing(false);editable = $event"
+              @editable="
+                editing(false);
+                editable = $event;
+              "
             ></toolbax>
           </v-row>
         </v-flex>
       </div>
-      <div v-if="!editable" @click="editable=true;editing(true)">
-        <div v-if="dragging==false">
+      <div class="pointer" v-if="!editable" @click="editable=true; editing(true)">
+        <div v-if="full&&dragging == false">
           <div class="text-start mb-3 font-weight-bold" v-text="data.Text"></div>
-          <v-textarea hide-details dense rows="2" disabled :placeholder="data.Holder" outlined />
+          <v-text-field
+              disabled
+              hide-details
+              class="mx-0"
+              :placeholder="data.Holder"
+              outlined
+              dense
+          />
+        </div>
+        <div v-if="full == false&&dragging == false" align="left">
+          <v-flex class="grey lighten-3 rounded pa-2"><span class="mr-2"><v-icon>mdi-text-short</v-icon></span><span class="text-subtitle-2 mb-2" v-text="'Trả lời ngắn'"></span></v-flex>
         </div>
         <div v-if="dragging" align="left">
-          <v-flex class="grey lighten-3 rounded pa-2"><span class="mr-2"><v-icon>mdi-text-subject</v-icon></span><span class="text-subtitle-2 mb-2" v-text="data.Text"></span></v-flex>
+          <v-flex class="grey lighten-3 rounded pa-2"><span class="mr-2"><v-icon>mdi-text-short</v-icon></span><span class="text-subtitle-2 mb-2" v-text="data.Text"></span></v-flex>
         </div>
       </div>
     </div>
@@ -54,18 +66,22 @@
 </template>
 
 <script>
-import toolbax from "./layout/bottom-toolbar";
+import toolbax from "../layout/bottom-toolbar";
 export default {
-  name: "TextArea",
+  name: "Textbox",
   props: {
     data: {
       QID: String,
-      Text: String,
       Required: Boolean,
+      Text: String,
       Holder: String,
     },
     change: Function,
     index: Number,
+    full: {
+      type: Boolean,
+      default: true
+    },
     dragging:{
       type: Boolean,
       default: false
@@ -81,8 +97,8 @@ export default {
     };
   },
   methods: {
-    editing(value){
-      // this.$emit('isEditting', value)
+    editing(value) {
+      // this.$emit("isEditting", value);
       this.$store.commit('setChinhSua',value)
     },
     remove() {

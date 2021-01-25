@@ -94,9 +94,8 @@ import Checkbox from "./CheckBox";
 import TextBox from "./TextBox.vue";
 import TextArea from "./TextArea.vue";
 import MarkTable from "./MarkTable.vue";
-import FileInput from "./FileInput.vue";
 import draggable from "vuedraggable";
-import toolbax from "./layout/bottom-toolbar";
+import toolbax from "../layout/bottom-toolbar";
 
 export default {
   name: "Session",
@@ -109,11 +108,6 @@ export default {
       Question: Array,
     },
     index: Number,
-    // editable: {
-    //   type: Boolean,
-    //   default: false,
-    // },
-    // draggle: Boolean,
   },
   data: function () {
     return {
@@ -186,7 +180,6 @@ export default {
     Checkbox,
     TextBox,
     Radio,
-    FileInput,
     MarkTable,
     TextArea,
     toolbax,

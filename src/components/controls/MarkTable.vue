@@ -261,8 +261,8 @@
 </template>
 
 <script>
-import toolbax from "./layout/bottom-toolbar";
-import point from "./preview/points";
+import toolbax from "../layout/bottom-toolbar";
+import point from "../preview/points";
 import draggable from "vuedraggable";
 
 export default {
