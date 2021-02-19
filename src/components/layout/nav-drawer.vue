@@ -71,7 +71,7 @@
               ></v-list-item-subtitle>
               <v-list-item-subtitle
                 class="text-caption mt-1"
-                v-text="`minhphongvn`"
+                v-text="$store.state.user['UserName']"
               ></v-list-item-subtitle>
             </v-list-item-content>
             <v-list-item-action v-show="template.DuocSuaJsondata" class="mx-0">

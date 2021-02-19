@@ -1,10 +1,10 @@
 import axios from '../api';
-import VueCookies from 'vue-cookies';
+// import VueCookies from 'vue-cookies';
 
 let redirect = url => window.location.href = url;
 
 axios.interceptors.request.use(function (config) {
-    const token = VueCookies.get('awt') || '';
+    const token = `eyJzaWQiOiIyQTMxNzdDNDcyNDNEQTA0IiwiZXhwIjoyMDg2OTUyMjM3fQ.z2uHzy1roKkruvpt_chWc1bgKYxLd6Q-BTPJaMqHD_8`; //VueCookies.get('awt') || '';
     config.headers.Authorization = token;
     return config;
   }, function (error) {
