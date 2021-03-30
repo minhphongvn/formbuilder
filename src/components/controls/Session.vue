@@ -30,6 +30,7 @@
               coverty();
               isEditing(false);
               editable = $event;
+              tab = (tab>0)?(index - 1):0;
             "
           ></toolbax>
         </v-row>
@@ -174,6 +175,14 @@ export default {
         return this.$store.commit("setDraggle", value)
       }
     },
+    tab: {
+      get(){
+        return this.$store.state.tab;
+      },
+      set(value){
+        this.$store.commit('pickTab',value);
+      }
+    }
   },
   components: {
     draggable,

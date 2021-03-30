@@ -38,12 +38,12 @@
           </transition-group>
         </draggable>
       </div>
-      <v-flex class="grey lighten-3 rounded text-center">
+      <v-flex class="rounded text-center">
 <!--        <span class="grey&#45;&#45;text text&#45;&#45;darken-1 text-subtitle-2 mr-2">Nhấn để tạo</span>-->
 
-        <v-btn @click="addTextBox" v-tooltip.left="'Trả lời ngắn'" color="white" class="text-sm-subtitle-2 blue align-center" tile text><span><v-icon>mdi-text-short</v-icon></span></v-btn>
+        <v-btn @click="addTextBox" v-tooltip.left="'Trả lời ngắn'" color="white" class="text-sm-subtitle-2 blue align-center rounded-tl rounded-bl" tile text><span><v-icon>mdi-text-short</v-icon></span></v-btn>
         <v-divider vertical></v-divider>
-        <v-btn @click="addRadio" v-tooltip.right="'Trắc nghiệm'" color="white" class="text-sm-subtitle-2 blue align-center" tile text><span><v-icon>mdi-radiobox-marked</v-icon></span></v-btn>
+        <v-btn @click="addRadio" v-tooltip.right="'Trắc nghiệm'" color="white" class="text-sm-subtitle-2 blue align-center rounded-tr rounded-br" tile text><span><v-icon>mdi-radiobox-marked</v-icon></span></v-btn>
       </v-flex>
     </div>
   </div>

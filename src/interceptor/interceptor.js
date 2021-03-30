@@ -4,7 +4,7 @@ import axios from '../api';
 let redirect = url => window.location.href = url;
 
 axios.interceptors.request.use(function (config) {
-    const token = `eyJzaWQiOiIyQTMxNzdDNDcyNDNEQTA0IiwiZXhwIjoyMDg2OTUyMjM3fQ.z2uHzy1roKkruvpt_chWc1bgKYxLd6Q-BTPJaMqHD_8`; //VueCookies.get('awt') || '';
+    const token = `eyJzaWQiOiJFNTBENTlBNEZFM0Y4QTY5IiwiZXhwIjoyMDg3OTU1MDM1fQ.MNZ76QsMqBHoOs4rMG9gw5d5vEgy9Q7N_MqrNZDOXFg`; //VueCookies.get('awt') || '';
     config.headers.Authorization = token;
     return config;
   }, function (error) {

@@ -262,7 +262,7 @@
 
 <script>
 import toolbax from "../layout/bottom-toolbar";
-import point from "../preview/points";
+import point from "../../../../../IdeaProjects/formo/src/components/template/controls/points";
 import draggable from "vuedraggable";
 
 export default {

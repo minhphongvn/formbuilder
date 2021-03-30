@@ -46,19 +46,25 @@
       <v-spacer></v-spacer>
       <v-divider vertical></v-divider>
       <bottombar :data="templates" :scroll="scrollToBottom" @dragging="dragging = $event"></bottombar>
-      <span v-tooltip.top="'Thêm phần'" dark class="pr-4 py-1" v-on:click="
+      <v-btn v-tooltip.top="'Thêm phần'" dark class="mr-3 rounded-circle" v-on:click="
           templates.Part.push({
             Name: 'TÊN PHẦN',
             Des: 'Mô tả',
             Question: [],
           });
           $store.commit('setQID');
-          scrollToBottom();
-        " :ripple="false">
+          // scrollToBottom();
+          scrollToTop();
+        " :ripple="false" icon>
         <v-icon>mdi-view-agenda-outline</v-icon>
 
-      </span>
+      </v-btn>
       <v-divider vertical></v-divider>
+
+      <v-btn :disabled="tab == 0" class="ml-2 mr-1" @click="prevStep" color="transparent" depressed icon><v-icon>mdi-chevron-left-circle</v-icon></v-btn>
+      <span>{{tab+1}}/{{templates.Part.length}}</span>
+      <v-btn :disabled="tab == (templates.Part.length-1)" class="mx-1" @click="nextStep" color="transparent" depressed icon><v-icon>mdi-chevron-right-circle</v-icon></v-btn>
+
       <v-spacer></v-spacer>
       <div v-tooltip.top="'Tạo mẫu mới'">
         <xacnhan title="Tạo mẫu mới" message="Hãy chắc chắn bạn đã lưu mẫu trước khi tạo mới !" :icon="true"
@@ -113,6 +119,12 @@
       };
     },
     methods: {
+      nextStep(){
+        this.tab += 1;
+      },
+      prevStep(){
+        this.tab -= 1;
+      },
       tooltip(content) {
         return {
           content: content
@@ -147,6 +159,10 @@
       undo: function () {
         this.templates = this.oldTemplates;
         this.snackbar.snackbar = false;
+      },
+      scrollToTop() {
+        let element = document.getElementById("uppoint");
+        element.scrollIntoView({ behavior: "smooth", block: "end" });
       },
       scrollToBottom() {
         let element = document.getElementById("endpoint");
@@ -226,6 +242,14 @@
           return this.$store.commit("setDragging", value)
         }
       },
+      tab: {
+        get(){
+          return this.$store.state.tab;
+        },
+        set(value){
+          this.$store.commit('pickTab',value);
+        }
+      }
     },
     components: {
       Xacnhan,

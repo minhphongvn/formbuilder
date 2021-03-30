@@ -8,6 +8,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    tab: 0,
     accessToken: "",
     user: {},
     useless: true,
@@ -102,7 +103,7 @@ export default new Vuex.Store({
             e.Option.map((val,k) => {
               if (val.Question != undefined) {
                 val.Question.map((ques, j) => {
-                  ques.QID = e.QID + k*100 + ++j;
+                  ques.QID = e.QID + (k+1)*100 + ++j;
                 });
               }
             });
@@ -124,7 +125,10 @@ export default new Vuex.Store({
         });
       });
     },
-    setViewMode: state => state.viewMode = !state.viewMode
+    setViewMode: state => state.viewMode = !state.viewMode,
+    pickTab: (state, payload) => {
+      state.tab = payload;
+    },
   },
   actions: {
     getUserInfo: async function ({commit}){

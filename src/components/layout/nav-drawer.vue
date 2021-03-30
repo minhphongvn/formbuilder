@@ -79,7 +79,7 @@
                 <v-icon color="orange">mdi-pencil</v-icon>
               </v-btn>
             </v-list-item-action>
-            <v-list-item-action class="mx-0">
+            <v-list-item-action v-show="template.DuocSuaJsondata" class="mx-0">
               <v-btn
                 color="red lighten-2"
                 dark
